@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours_ai.util
+package com.contourdocumentimaging.android.contours.util
 
 import android.content.Context
 import android.content.SharedPreferences

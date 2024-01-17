@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours_ai
+package com.contourdocumentimaging.android.contours
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
