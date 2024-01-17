@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -8,7 +9,6 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.contourdocumentimaging.android.contours_ai"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -39,11 +39,21 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion '1.5.1'
     }
-    packaging {
+    packagingOptions {
         resources {
-            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            excludes += ['META-INF/androidx.exifinterface_exifinterface.version']
         }
     }
+
+    /*afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                }
+            }
+        }
+    }*/
 }
 
 dependencies {
