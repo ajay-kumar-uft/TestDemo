@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours.scan;
+package com.document.android.contours.scan;
 
 public class ScanHelper {
     public boolean isGood() {

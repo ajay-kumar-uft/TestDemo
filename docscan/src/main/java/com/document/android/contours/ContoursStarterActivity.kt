@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours
+package com.document.android.contours
 
 class ContoursStarterActivity {
     fun start() {

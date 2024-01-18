@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.contourdocumentimaging.android.contours'
+    namespace 'com.document.android.contours'
     compileSdk 34
 
     defaultConfig {

@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours.c;
+package com.document.android.contours.c;
 
 public class CScanHelper {
     public boolean isGood() {

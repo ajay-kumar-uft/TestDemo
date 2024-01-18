@@ -1,4 +1,4 @@
-package com.contourdocumentimaging.android.contours.util
+package com.document.android.contours.util
 
 import android.content.Context
 import android.content.SharedPreferences
