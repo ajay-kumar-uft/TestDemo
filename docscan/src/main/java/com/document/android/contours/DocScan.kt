@@ -1,5 +1,6 @@
 package com.document.android.contours
 
+import androidx.annotation.Keep
 import com.document.android.contours.a.Scan
 import com.document.android.contours.b.CaptureHelper
 import com.document.android.contours.c.CScanHelper
@@ -10,6 +11,7 @@ import com.document.android.contours.util.ContoursPreference
 
 class DocScan {
 
+    @Keep
     companion object {
         fun init() {
             val isGood = CheckCaptureHelper().isGood
