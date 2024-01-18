@@ -21,5 +21,4 @@
 #-renamesourcefileattribute SourceFile
 -repackageclasses 'com.docscan'
 -allowaccessmodification
--useuniqueclassmembernames
 -keeppackagenames doNotKeepAThing
