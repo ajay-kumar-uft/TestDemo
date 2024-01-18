@@ -23,7 +23,9 @@ class Utility {
 
     companion object {
 
-
+        fun getSize(): String {
+            return "50MB"
+        }
 
         fun deviceType(context: Context): String {
             return if(isTablet(context)) {

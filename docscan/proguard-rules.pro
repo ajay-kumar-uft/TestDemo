@@ -19,7 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--repackageclasses 'com.docscan'
--allowaccessmodification
--useuniqueclassmembernames
--keeppackagenames doNotKeepAThing
+-keepclassmembers class com.contourdocumentimaging.android.contours.DocScan {
+    public static ** Companion;
+}
