@@ -7,6 +7,6 @@ import com.document.android.contours.DocScan
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DocScan().init()
+        DocScan.init()
     }
 }
