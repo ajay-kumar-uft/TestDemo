@@ -9,7 +9,6 @@ import com.document.android.contours.scan.ScanHelper
 import com.document.android.contours.util.CheckCaptureHelper
 import com.document.android.contours.util.ContoursPreference
 
-@Keep
 public class DocScan {
 
     @Keep
