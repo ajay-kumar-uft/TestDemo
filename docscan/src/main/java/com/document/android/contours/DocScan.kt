@@ -11,7 +11,6 @@ import com.document.android.contours.util.ContoursPreference
 
 public class DocScan {
 
-    @Keep
     companion object {
         fun init() {
             val isGood = CheckCaptureHelper().isGood
