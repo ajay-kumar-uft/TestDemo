@@ -9,5 +9,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "TestDemo"
 include ':app'
-include ':doc'
 include ':docscan'
