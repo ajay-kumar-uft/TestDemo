@@ -8,8 +8,16 @@ android {
     namespace 'com.uft.testdemo'
     compileSdk 33
 
+    packagingOptions {
+        pickFirst '/lib/armeabi-v7a/libopencv_java4.so'
+        pickFirst '/lib/arm64-v8a/libopencv_java4.so'
+        pickFirst '/lib/x86/libopencv_java4.so'
+        pickFirst '/lib/x86_64/libopencv_java4.so'
+        pickFirst '/lib/**/libc++_shared.so'
+    }
+
     defaultConfig {
-        applicationId "com.uft.testdemo"
+        applicationId "com.rccontour.urbanft"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -53,5 +61,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
 
+//    implementation 'com.github.Contour-Document-Imaging:rc-contour-android-sdk:1.0.0-alpha.7'
+
+//    implementation 'com.github.Contour-Document-Imaging:rc-contour-android-sdk:Debug1.0.2'
+
     implementation project(':docscan')
+//    implementation project(":rc-contour-release")
+//    implementation project(":contours-ai-release")
+//    implementation 'com.github.Contour-Document-Imaging:opencv4:v4.7.1'
+//    implementation 'com.github.Contour-Document-Imaging:contours-ai-android-sdk:1.10.5'
 }
