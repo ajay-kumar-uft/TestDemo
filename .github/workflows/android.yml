@@ -1,4 +1,4 @@
-name: Android Build & Release
+name: Android Debug Build & Share
 
 on:
   push:
@@ -29,17 +29,46 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      # 5. Build release APK
+      # 5. Build Debug APK
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
-      # 6. Create GitHub Release
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
+      # 6. Build Debug APK
+      - name: Build Release aar
+        run: ./gradlew bundleReleaseAar
+
+      # 7. Upload APK as artifact
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ github.ref_name }}
-          name: "Release ${{ github.ref_name }}"
-          body: "Android build generated automatically by GitHub Actions 🚀"
-          files: app/build/outputs/apk/debug/app-debug.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      # 8. Upload AAR as artifact
+      - name: Upload AAR Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-aar
+          path: docscan/build/outputs/aar/docscan-release.aar
+
+      # 9. Send Email with Artifact Link
+#      - name: Send Email with APK Link
+#        uses: dawidd6/action-send-mail@v3
+#        with:
+#          server_address: smtp.gmail.com
+#          server_port: 465
+#          username: ${{ secrets.EMAIL_USERNAME }}
+#          password: ${{ secrets.EMAIL_PASSWORD }}
+#          subject: "New Android Debug Build Available"
+#          to: tester1@example.com,tester2@example.com
+#          from: "CI Bot <${{ secrets.EMAIL_USERNAME }}>"
+#          body: |
+#            Hi Testers,
+#
+#            A new debug build is available.
+#
+#            👉 Download it here:
+#            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+#
+#            Thanks,
+#            Urban FT
