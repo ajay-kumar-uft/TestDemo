@@ -61,7 +61,7 @@ jobs:
 #          password: ${{ secrets.EMAIL_PASSWORD }}
 #          subject: "New Android Debug Build Available"
 #          to: tester1@example.com,tester2@example.com
-#          from: "CI Bot <${{ secrets.EMAIL_USERNAME }}>"
+#          from: "UrbanFT <${{ secrets.EMAIL_USERNAME }}>"
 #          body: |
 #            Hi Testers,
 #
